@@ -19,8 +19,6 @@ import Payment from "./components/payment";
           <div className="container"></div>
             <Routes>
               <Route exact path="/" element={<Home/>}/>
-              {/* <Route exact path="/fastfood" element={<Menu category="fastfood" key="fastfood"/>}/>
-              <Route exact path="/Parantha" element={<Menu category="Parantha" key="Parantha"/>}/> */}
               <Route path="/Home" element={<Menu/>} />
               <Route path="/login" element={<Login />} />
               <Route path="/register" element={<Register />} />

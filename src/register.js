@@ -19,7 +19,7 @@ export const Register = (props) => {
        
         updateFormData([newEntry])
        // console.log(formData)
-       if(fullname==='' || email==='' || password==='') return
+       //if(fullname==='' || email==='' || password==='') return
        
             const params={
             method:'post',
