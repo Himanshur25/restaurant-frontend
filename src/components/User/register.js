@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import Navbar from "./components/Navbar";
+import Navbar from "../Navbar/Navbar";
+import Image from "./../../components/images/foodie.jpeg";
 import { useNavigate } from "react-router-dom";
-import './App.css';
-export const Register = (props) => {
+import "../../../src/./App.css";
+export const Register = () => {
     const [fullname, setfullName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -19,8 +20,7 @@ export const Register = (props) => {
        
         updateFormData([newEntry])
        // console.log(formData)
-       if(fullname==='' || email==='' || password==='') return window.alert("Please Enter the field first")
-       
+       if(fullname==='' || email==='' || password==='') return window.alert("Please fill out the field first")
             const params={
             method:'post',
             headers:{
@@ -28,38 +28,31 @@ export const Register = (props) => {
             },
             body:JSON.stringify(newEntry)
         }
-        fetch(`${process.env.REACT_APP_BASE_URL}/api/register`,params).then((res)=>{
+        fetch("http://localhost:5000/api/register",params).then((res)=>{
             return res.json()
         }).then((data)=>{
             console.log(data);
             window.alert("Registration successful");
             navigate('/login')
-        })
-
-    
- 
-        
-}
-
+        })       
+     }
     return (
         <div><Navbar/>
-        
         <div className="App">
         <div className="auth-form-container">
             <h2>Register</h2>
         <form className="register-form" onSubmit={Submit}>
             <label htmlFor="fullname">Full name</label>
             <input value={fullname} onChange={(e)=>{setfullName(e.target.value)}} type="fullname" placeholder="Enter your Full name" />
-            <label htmlFor="email">email</label>
+            <label htmlFor="email">Email</label>
             <input value={email} onChange={(e)=>{setEmail(e.target.value)}} type="email" placeholder="Enter your email"  />
-            <label htmlFor="password">password</label>
+            <label htmlFor="password">Password</label>
             <input value={password} onChange={(e)=>{setPassword(e.target.value)}} type="password" placeholder="Enter your password" />
             <button>Register</button>
-        </form>
-        {/* <button className="link-btn" onClick={() => props.onFormSwitch('login')}>Already have an account? Login here.</button> */}
+            </form>
+            </div>
     </div>
-    </div>
-    
+    <img className="register" src={Image}/>
     </div>
     )
 }
