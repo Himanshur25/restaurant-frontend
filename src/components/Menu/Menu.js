@@ -28,7 +28,7 @@ const Menu = () => {
         })
       }
      const fetchData=()=>{
-      const url="http://localhost:5000/api/foods"
+      const url=`${process.env.REACT_APP_BASE_URL}/api/foods`
               const params={
               method:'get',
               headers:{

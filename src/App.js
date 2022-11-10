@@ -8,7 +8,7 @@ import Menu from "./components/Menu/Menu"
  import  {Login } from "./components/User/login";
  import { Register } from "./components/User/register";
  import './App.css';
-import Checkout from "./components/cart/Checkout";
+import Checkout from "./components/Cart/Checkout";
 import Payment from "./components/Payment/Payment";
 import Contactus from "./components/Contactus/Contactus";
 import Aboutus from "./components/Aboutus/Aboutus";

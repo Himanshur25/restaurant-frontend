@@ -28,7 +28,7 @@ export const Register = () => {
             },
             body:JSON.stringify(newEntry)
         }
-        fetch("http://localhost:5000/api/register",params).then((res)=>{
+        fetch(`${process.env.REACT_APP_BASE_URL}/api/register`,params).then((res)=>{
             return res.json()
         }).then((data)=>{
             console.log(data);

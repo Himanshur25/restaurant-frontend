@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 //import 'bootstrap/dist/css/bootstrap.min.css';
-import CartProvider from './components/cart/Cart';
+import CartProvider from './components/Cart/Cart';
 
 
 

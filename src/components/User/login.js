@@ -18,7 +18,7 @@ export const Login = () => {
     if (email === "" || password === "")
       return window.alert("Please Fill out the field first");
     else {
-      const url = "http://localhost:5000/api/login";
+      const url=`${process.env.REACT_APP_BASE_URL}/api/login`
       const params = {
         method: "post",
         headers: {
