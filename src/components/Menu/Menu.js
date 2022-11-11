@@ -9,7 +9,7 @@ const Menu = () => {
     const [data,setData]=useState([])
     
      function addToCart (id){  
-    const url="http://localhost:5000/api/cart"
+      const url=`${process.env.REACT_APP_BASE_URL}/api/cart`
                 const params={
                 method:'post',
                 headers:{
