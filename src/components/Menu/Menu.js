@@ -9,7 +9,7 @@ const Menu = () => {
     const [data,setData]=useState([])
     
      function addToCart (id){  
-      const url=`${process.env.REACT_APP_BASE_URL}/api/cart`
+      const url=`${process.env.REACT_APP_BASE_URL}api/cart`
                 const params={
                 method:'post',
                 headers:{
@@ -28,7 +28,7 @@ const Menu = () => {
         })
       }
      const fetchData=()=>{
-      const url=`${process.env.REACT_APP_BASE_URL}/api/foods`
+      const url=`${process.env.REACT_APP_BASE_URL}api/foods`
               const params={
               method:'get',
               headers:{
