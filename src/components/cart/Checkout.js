@@ -9,7 +9,7 @@ import image from "./../images/food.webp"
 export default function Checkout() {
   const [data, setData] = useState([]);
   const getData = () => {
-    const url=`${process.env.REACT_APP_BASE_URL}api/cart`
+    const url=`${process.env.REACT_APP_BASE_URL}/api/cart`
     const params = {
       method: "get",
       headers: {
